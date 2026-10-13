@@ -1,0 +1,25 @@
+# Secrets - never commit
+.env
+*.pem
+
+# Raw data: not redistributed (check the dataset licence; download it yourself, see README)
+data/raw/*
+!data/raw/.gitkeep
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
