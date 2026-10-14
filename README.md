@@ -92,7 +92,7 @@ The data is not committed to this repository. **Check the dataset's licence on t
 
 ```bash
 python -m src.run_pipeline --dry-run     # validate + clean files only, no database
-python -m src.run_pipeline               # full run (about 15 seconds)
+python -m src.run_pipeline               # full run (about 10 seconds on a 1-CPU sandbox)
 python -m src.run_analysis               # run the 13 queries, write docs/sample_query_results.md
 python -m pytest                         # 63 tests (needs PostgreSQL; DB tests skip if unreachable)
 ```
