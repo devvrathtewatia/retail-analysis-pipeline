@@ -1,0 +1,6 @@
+lateness_bucket,late_orders,pct_of_late_orders
+"1: 0 days (arrived on the estimated date, after 00:00)",1292,16.51
+2: 1-3 calendar days late,1870,23.89
+3: 4-7 calendar days late,1802,23.03
+4: 8-14 calendar days late,1478,18.89
+5: more than 14 calendar days late,1384,17.68

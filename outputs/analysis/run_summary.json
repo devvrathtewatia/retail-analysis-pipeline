@@ -1,0 +1,171 @@
+{
+  "run_at": "2026-10-20T09:17:10.268578+05:30",
+  "sql_file": "sql/04_analysis_queries.sql",
+  "query_count": 13,
+  "queries": [
+    {
+      "name": "q01_overall_late_rate",
+      "status": "success",
+      "row_count": 1,
+      "columns": [
+        "eligible_orders",
+        "late_orders",
+        "late_rate_pct",
+        "late_by_calendar_day",
+        "calendar_day_late_rate_pct"
+      ],
+      "output_file": "outputs/analysis/q01_overall_late_rate.csv"
+    },
+    {
+      "name": "q02_late_rate_by_delivery_month",
+      "status": "success",
+      "row_count": 25,
+      "columns": [
+        "delivery_month",
+        "delivered_orders",
+        "late_orders",
+        "late_pct",
+        "change_vs_prev_month_pp",
+        "low_volume"
+      ],
+      "output_file": "outputs/analysis/q02_late_rate_by_delivery_month.csv"
+    },
+    {
+      "name": "q03_late_rate_by_seller",
+      "status": "success",
+      "row_count": 15,
+      "columns": [
+        "seller_id",
+        "eligible_orders",
+        "late_orders",
+        "late_pct",
+        "seller_state"
+      ],
+      "output_file": "outputs/analysis/q03_late_rate_by_seller.csv"
+    },
+    {
+      "name": "q04_late_rate_by_category",
+      "status": "success",
+      "row_count": 15,
+      "columns": [
+        "category_name_en",
+        "eligible_orders",
+        "late_orders",
+        "late_pct"
+      ],
+      "output_file": "outputs/analysis/q04_late_rate_by_category.csv"
+    },
+    {
+      "name": "q05_delivery_time_summary",
+      "status": "success",
+      "row_count": 1,
+      "columns": [
+        "eligible_orders",
+        "avg_days",
+        "median_days",
+        "p90_days",
+        "p95_days",
+        "max_days",
+        "avg_estimated_days"
+      ],
+      "output_file": "outputs/analysis/q05_delivery_time_summary.csv"
+    },
+    {
+      "name": "q06_delivery_time_by_customer_state",
+      "status": "success",
+      "row_count": 21,
+      "columns": [
+        "customer_state",
+        "eligible_orders",
+        "avg_delivery_days",
+        "avg_estimated_days",
+        "late_pct"
+      ],
+      "output_file": "outputs/analysis/q06_delivery_time_by_customer_state.csv"
+    },
+    {
+      "name": "q07_cancellation_rate_by_purchase_month",
+      "status": "success",
+      "row_count": 25,
+      "columns": [
+        "purchase_month",
+        "orders",
+        "canceled_orders",
+        "canceled_pct",
+        "low_volume"
+      ],
+      "output_file": "outputs/analysis/q07_cancellation_rate_by_purchase_month.csv"
+    },
+    {
+      "name": "q08_order_status_distribution",
+      "status": "success",
+      "row_count": 8,
+      "columns": [
+        "order_status",
+        "orders",
+        "pct_of_orders"
+      ],
+      "output_file": "outputs/analysis/q08_order_status_distribution.csv"
+    },
+    {
+      "name": "q09_how_late_are_late_orders",
+      "status": "success",
+      "row_count": 5,
+      "columns": [
+        "lateness_bucket",
+        "late_orders",
+        "pct_of_late_orders"
+      ],
+      "output_file": "outputs/analysis/q09_how_late_are_late_orders.csv"
+    },
+    {
+      "name": "q10_late_rate_single_vs_multi_seller",
+      "status": "success",
+      "row_count": 2,
+      "columns": [
+        "order_type",
+        "eligible_orders",
+        "late_pct",
+        "avg_delivery_days"
+      ],
+      "output_file": "outputs/analysis/q10_late_rate_single_vs_multi_seller.csv"
+    },
+    {
+      "name": "q11_impossible_or_inconsistent_dates",
+      "status": "success",
+      "row_count": 9,
+      "columns": [
+        "rule",
+        "orders"
+      ],
+      "output_file": "outputs/analysis/q11_impossible_or_inconsistent_dates.csv"
+    },
+    {
+      "name": "q12_missing_keys_and_duplicate_ids",
+      "status": "success",
+      "row_count": 5,
+      "columns": [
+        "table_name",
+        "null_key_rows",
+        "duplicate_key_groups",
+        "orphan_rows"
+      ],
+      "output_file": "outputs/analysis/q12_missing_keys_and_duplicate_ids.csv"
+    },
+    {
+      "name": "q13_sample_of_flagged_orders",
+      "status": "success",
+      "row_count": 10,
+      "columns": [
+        "order_id",
+        "order_status",
+        "purchased_at",
+        "carrier_delivered_at",
+        "delivered_at",
+        "reasons"
+      ],
+      "output_file": "outputs/analysis/q13_sample_of_flagged_orders.csv"
+    }
+  ],
+  "status": "success"
+}

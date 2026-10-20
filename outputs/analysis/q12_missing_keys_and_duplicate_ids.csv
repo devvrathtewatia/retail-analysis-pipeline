@@ -1,0 +1,6 @@
+table_name,null_key_rows,duplicate_key_groups,orphan_rows
+orders,0,0,0
+order_items,0,0,0
+customers,0,0,0
+products,0,0,0
+sellers,0,0,0

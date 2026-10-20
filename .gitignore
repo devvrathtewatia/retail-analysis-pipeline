@@ -23,3 +23,18 @@ venv/
 Thumbs.db
 .idea/
 .vscode/
+
+# Model artifacts and local caches; small metrics/reports in results/ are intentionally tracked.
+*.joblib
+*.pkl
+artifacts/
+.ipynb_checkpoints/
+.mypy_cache/
+.ruff_cache/
+
+# Locally generated feature extracts are reproducible from the raw data.
+data/derived/*
+!data/derived/.gitkeep
+
+# Local batch scores depend on private/current operational inputs; regenerate when needed.
+results/dispatch_scored_orders.csv

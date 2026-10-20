@@ -1,0 +1,10 @@
+rule,orders
+approved before purchase,0
+carrier pick-up before purchase,166
+delivered before carrier pick-up,23
+delivered before purchase,0
+estimated delivery before purchase,0
+status delivered but no delivery date,8
+delivery date but status not delivered,6
+carrier before approval (suspicious only),1359
+ANY of the first seven rules (has_dq_flag),203
